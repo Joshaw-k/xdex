@@ -40,6 +40,29 @@
 
 ## Getting Started
 
+### Setup Instructions
+
+- Clone this repo
+
+```
+git clone https://github.com/Joshaw-k/xdex
+```
+
+- then enter the directory and install dependencies
+
+```
+cd xdex
+npm install
+```
+
+- Run server
+
+```
+npm run dev
+```
+
+### Test Instructions
+
 - From the Home page
 
 ![Home Page](/public/homePage.png)
