@@ -28,149 +28,84 @@
 
 - Withdrawals
 
+### Note
+
+- Things like PUBLIC KEY, CUSTOM ASSET, LIQUIDITY ASSET AND LIQUIDITY ID are stored in the browser local storage for better user experience, so you don't have to copy them and paste in any input field.
+
 ### Link
 
-- Demo link -
+- [Demo link](https://xdex.vercel.app/)
 
 ## Getting Started
 
-Below you'll find instructions on how setting up this dapp locally.
+- From the Home page
 
-### Prerequisites
+![Home Page](/public/homePage.png)
 
-Here are some packages you need to have installed on your PC:
+#### Generate account and fund
 
-- [nodejs](https://nodejs.org/en), [npm](https://docs.npmjs.com/cli/v10/configuring-npm/install), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable)
+- Click the GENERATE KEYPAIR button to go the "/generate" page then click on both GENERATE KEYPAIR and FUND ACCOUNT button to create an account and fund the account.
 
-- [docker](https://docs.docker.com/get-docker/)
+![generate](/public/generate.png)
 
-- [cartesi-cli](https://docs.cartesi.io/cartesi-rollups/1.3/development/migration/#install-cartesi-cli)
-  ```sh
-  npm install -g @cartesi/cli
-  ```
+You can see the transaction [here](https://stellar.expert/explorer/testnet/account/GCAQWAFUA5JXXSWDGD5UDVV7YVAPTNEAK3XV4DE6PV4DBAMCATPE2MZR)
 
-### Installation
+#### Create Liquidity Pool
 
-1. Clone this repo
-   ```sh
-   git clone https://github.com/Koniesjay/dice_roll.git
-   ```
-2. Install NPM packages
-   ```sh
-   yarn install
-   ```
-3. Build and run the dapp via `cartesi-cli`
-   ```sh
-   cartesi build
-   ```
-   and
-   ```sh
-   cartesi run
-   ```
+- Click the "BACK HOME" link at the top of the page to go back to the home page
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![go home](/public/gohome.png)
 
-## Usage
+- Click on the ADMIN button to create a liquidity pool.
 
-1. Make an advance request.
+![Home Page](/public/homePage.png)
 
-```
-   cartesi send generic
-```
+- After filling the input fields click the CREATE LIQUIDITY POOL button
 
-2. Choose Foundry as the preferred chain.
+![create liquidity](/public/create.png)
 
-```
-❯ Foundry
-  Arbitrum Sepolia
-  Base Sepolia
-  OP Sepolia
-  Sepolia
-  Arbitrum One
-  Base
-  Ethereum
-  OP Mainnet
-```
+You can see the transaction [here](https://stellar.expert/explorer/testnet/tx/29b002767d904c599ce4685f370068f7c71f3ae31ddc9ae58b3b5dcf4d3b1358)
 
-3. Press Enter for the default RPC URL.
+#### Swap XLM for custom asset
 
-```
-RPC URL http://127.0.0.1:8545
-```
+- The next step is to try out the TRADE feature, so go back home then navigate to the TRADE page
 
-4. Choose Mnemonic as the preferred wallet option.
+![trade page](/public/trade.png)
 
-```
-❯ Mnemonic
-  Private Key
-```
+- Click the swap button and fill in the input fields
 
-5. Press Enter for the default Mnemonic phrase.
+![swap page](/public/swap.png)
 
-```
-Mnemonic (test test test test test test test test test test test junk)
-```
+You can see the transaction [here](https://stellar.expert/explorer/testnet/tx/e34e5beeec8413f244a0c925fe5567dc73389b5140ea23e5ece0ca8d8e87b6fa)
 
-6. Choose your preferred account.
+#### Provide Liquidity
 
-```
-❯ 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9993.476291596530017783 ETH
-  0x70997970C51812dc3A010C7d01b50e0d17dc79C8 9899.778501376664201744 ETH
-  0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC 10000 ETH
-  0x90F79bf6EB2c4f870365E785982E1f101E93b906 10000 ETH
-  0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 10000 ETH
-  0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc 10000 ETH
-  0x976EA74026E726554dB657fA54763abd0C3a0aa9 10000 ETH
-  0x14dC79964da2C08b23698B3D3cc7Ca32193d9955 10000 ETH
-  0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f 10000 ETH
-  0xa0Ee7A142d267C1f36714E4a8F75612F20a79720 10000 ETH
-```
+- Click the "BACK HOME" link at the top of the page to go back to the home page
 
-7. Press Enter for the default Application address.
+![go home](/public/gohome.png)
 
-```
-Application address (0xab7528bb862fb57e8a2bcd567a2e929a0be56a5e)
-```
+- Click on the LIQUIDITY PROVIDER button to create a deposit liquidity into the liquidity pool.
 
-8. Choose String encoding as the preferred Input option.
+![Home Page](/public/homePage.png)
 
-```
-❯ String encoding
-  Hex string encoding
-  ABI encoding
-```
+- After filling the input fields click the PROVIDE button
 
-9. Input your guess string.
+![provide liquidity](/public/provide.png)
 
-```
-Input (as string): 2
-```
+You can see the transaction [here](https://stellar.expert/explorer/testnet/tx/840a79130a6f4f277a27cda2944442722af9ccd9dde659af052f9afa5a908a02)
 
-10. Check the running node in your terminal for the result.
+#### Withdraw Liquidity
 
-```
-validator-1  | Dice rolled number 5
-validator-1  | You guessed 2
-validator-1  | The result didn't match. Try again!!!
-```
+- The next step is to try out the TRADE feature, so go back home then navigate to the TRADE page
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![trade page](/public/trade.png)
 
-## Contributing
+- Click the withdraw button and fill in the input field
 
-We welcome contributions from the community! If you'd like to contribute to Dice Roll, please follow these steps:
+![withdraw page](/public/withdraw.png)
 
-- Fork the repository.
-- Create a new branch for your feature or bug fix.
-- Make your changes and commit them with descriptive commit messages.
-- Push your changes to your forked repository.
-- Submit a pull request to the main repository.
-- Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
+You can see the transaction [here](https://stellar.expert/explorer/testnet/tx/7f043888715c57ec5de493c08c01a7a4d92f154cde90baebb2c601b0524f616d)
 
 ## License
 
-Dice Roll is released under the MIT License.
-
-## Acknowledgments
-
-Dice Roll is built on top of the Cartesi platform and utilizes various open-source libraries and tools. We would like to express our gratitude to the developers and contributors of these projects.
+XDEX is released under the MIT License.
