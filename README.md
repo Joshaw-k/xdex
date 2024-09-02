@@ -36,6 +36,8 @@
 
 - [Demo link](https://xdex.vercel.app/)
 
+- [Post/Tweet about my project](https://x.com/awinrin/status/1830541890040508680?s=46)
+
 ## Getting Started
 
 - From the Home page
